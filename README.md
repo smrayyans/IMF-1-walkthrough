@@ -2,7 +2,6 @@
 
 **Platform:** VulnHub  
 **Difficulty:** Intermediate  
-**Flags:** 6 / 6  
 
 ---
 
@@ -11,19 +10,6 @@
 IMF (Impossible Mission Force) is a VulnHub boot2root where every flag contains a hint pointing to the next step. The machine covers a lot of ground — passive recon, reading page source carefully, PHP type juggling, SQL injection, file upload filter bypass, remote code execution, and finally a stack-based buffer overflow to get root. It's a great machine for chaining small findings into a full compromise.
 
 This writeup is intentionally detailed about where things went wrong and why, not just what the final answer was.
-
----
-
-## Flags
-
-| # | Flag | Decoded Value | Found At |
-|---|------|--------------|----------|
-| 1 | `flag1{allthefiles}` | allthefiles | Base64 in contact.php HTML |
-| 2 | `flag2{aW1mYWRtaW5pc3RyYXRvcg==}` | imfadministrator | JS filenames in page source |
-| 3 | `flag3{Y29udGludWVUT2Ntcw==}` | continueTOcms | PHP strcmp() bypass |
-| 4 | `flag4{dXBsb2Fkcjk0Mi5waHA=}` | uploadr942.php | QR code in CMS page |
-| 5 | `flag5{agentservices}` | agentservices | /uploads directory after RCE |
-| 6 | `flag6{R2gwc3RQcm90MGMwbHM=}` | Gh0stProt0c0ls | /root/Flag.txt after root shell |
 
 ---
 
